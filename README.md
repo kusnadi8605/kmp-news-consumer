@@ -11,10 +11,4 @@ CREATE TABLE `news` (
 );
 
 # Post News
-curl -X POST \
-  http://localhost:8181/api/save_news \
-  -H 'Content-Type: application/json'
-  -d '{
-	"author":"kusnadi",
-	"body":"ini adalah body"
-}'
+curl -X POST http://localhost:8181/api/save_news -H 'Content-Type: application/json' -d '{"author":"kusnadi","body":"ini adalah body"}'
