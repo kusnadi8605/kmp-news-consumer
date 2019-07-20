@@ -1,0 +1,21 @@
+#port where service shall LISTEN for connection
+listenPort: :9005
+
+#database configuration
+query: query/db_query.yml
+dbType: mysql
+dbUrl: root:@tcp(localhost:3306)/kmp_news
+
+#elastic config
+elasticURL: http://127.0.0.1:9200
+elasticIndex: news
+
+#logging settings
+log:
+  filename: logs/consumer.log
+  level: DEBUG
+  kafkaOffset : logs/offset.log
+
+kafkaURL: localhost:9092
+kafkaTopic: news
+kafkaGroup: kmp_news
