@@ -1,0 +1,24 @@
+INFO 2019-07-21 15:04:23.945 got incoming message, subject [{
+	
+	"author":"kusnadi",
+	"body":" beritaku hari ini"
+}]
+INFO 2019-07-21 15:04:23.951 save to database ID : [[{31 2019-07-21 15:04:23}]]
+INFO 2019-07-21 15:04:24.000 got incoming message, subject [{
+	
+	"author":"kusnadi",
+	"body":" beritaku hari ini"
+}]
+INFO 2019-07-21 15:04:24.006 save to database ID : [[{32 2019-07-21 15:04:24}]]
+INFO 2019-07-21 15:04:24.045 got incoming message, subject [{
+	
+	"author":"kusnadi",
+	"body":" beritaku hari ini"
+}]
+INFO 2019-07-21 15:04:24.050 save to database ID : [[{33 2019-07-21 15:04:24}]]
+INFO 2019-07-21 15:04:34.469 got incoming message, subject [{
+	
+	"author":"kusnadi",
+	"body":" beritaku hari ini"
+}]
+INFO 2019-07-21 15:04:34.473 save to database ID : [[{34 2019-07-21 15:04:34}]]
