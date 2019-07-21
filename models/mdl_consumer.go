@@ -20,8 +20,6 @@ func Consumer(reader *kafka.Reader, dbConn *conf.Connection, elasticURL string) 
 			log.Errorf("read kafka error : %s", err.Error())
 		}
 
-		//log.Logf("Got incoming message: %v / %v / %v : %s", m.Topic, m.Partition, m.Offset, string(m.Value))
-
 		kafkaJSON := dts.NewsJSON{}
 
 		log.Logf("got incoming message, subject %s", m.Value)

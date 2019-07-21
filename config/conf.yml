@@ -8,7 +8,7 @@ dbUrl: root:@tcp(localhost:3306)/kmp_news
 
 #elastic config
 elasticURL: http://127.0.0.1:9200
-elasticIndex: news
+elasticIndex: kmp_news
 
 #logging settings
 log:

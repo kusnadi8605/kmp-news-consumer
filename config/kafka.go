@@ -23,7 +23,6 @@ func KafkaConn(broker []string, topic string, group string) *kafka.Reader {
 
 	// to consume messages
 	fmt.Printf("kafka start consuming topic : %v", topic)
-	//log.Logf("kafka start consuming topic : %v", topic)
 
 	reader := kafka.NewReader(kafconf)
 

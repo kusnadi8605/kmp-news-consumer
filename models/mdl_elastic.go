@@ -3,19 +3,19 @@ package models
 import (
 	"context"
 	"fmt"
-	dts "kmp-news-consumer/datastruct" //
+	dts "kmp-news-consumer/datastruct"
 	"strconv"
 
-	"gopkg.in/olivere/elastic.v7" //
+	"gopkg.in/olivere/elastic.v7"
 )
 
 const mapping = `
-{
-	"settings":{
-		"number_of_shards": 1,
-		"number_of_replicas": 0
-	}
-}`
+				{
+					"settings":{
+						"number_of_shards": 1,
+						"number_of_replicas": 0
+					}
+				}`
 
 //CreateIndex ..
 func CreateIndex(client *elastic.Client, index string) error {
@@ -26,8 +26,8 @@ func CreateIndex(client *elastic.Client, index string) error {
 		//panic(err)
 		return err
 	}
+	// Create a new index if not exist
 	if !exists {
-		// Create a new index.
 		createIndex, err := client.CreateIndex(index).BodyString(mapping).Do(ctx)
 		if err != nil {
 			// Handle error
@@ -43,10 +43,9 @@ func CreateIndex(client *elastic.Client, index string) error {
 
 //CreateDoc ..
 func CreateDoc(client *elastic.Client, id int64, index string, news dts.SaveNewsJSON) error {
-	//tweet1 := SaveNewsJSON{ID: 9, User: "dadang lagi", Message: "hallo lafi"}
+	//tweet1 := SaveNewsJSON{ID: 9, User: "dadang lagi", Message: "hallo dadang"}
 
 	sID := strconv.FormatInt(id, 10)
-
 	err := CreateIndex(client, index)
 
 	if err != nil {
@@ -63,7 +62,7 @@ func CreateDoc(client *elastic.Client, id int64, index string, news dts.SaveNews
 		//panic(err)
 		return err
 	}
-	fmt.Printf("Indexed tweet %s to index %s, type %s\n", put1.Id, put1.Index, put1.Type)
+	fmt.Printf("Indexed news %s to index %s, type %s\n", put1.Id, put1.Index, put1.Type)
 
 	return nil
 }

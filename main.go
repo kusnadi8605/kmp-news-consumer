@@ -43,20 +43,6 @@ func main() {
 	// Consumer
 	mdl.Consumer(kafReader, dbConn, conf.Param.ElasticURL)
 
-	//jsonNews := id[0]
-
-	//fmt.Println("dataya ", jsonNews.Created, jsonNews.ID)
-
-	//fmt.Println(err)
-
-	//elsConn := conf.ElasticConn(conf.Param.ElasticURL)
-
-	//reateDoc(client *elastic.Client, id string, index string, news dts.SaveNewsJSON) error {
-	//strInt64, _ := strconv.FormatInt(jsonNews.ID, 10)
-	//mdl.CreateDoc(elsConn, jsonNews.ID, conf.Param.ElasticIndex, jsonNews)
-
-	//fmt.Println(elsConn)
-
 	errs := make(chan error)
 	go func() {
 		c := make(chan os.Signal)

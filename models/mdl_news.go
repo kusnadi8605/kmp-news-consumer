@@ -2,8 +2,7 @@ package models
 
 import (
 	conf "kmp-news-consumer/config"
-	dts "kmp-news-consumer/datastruct" //
-	//
+	dts "kmp-news-consumer/datastruct"
 	"time"
 )
 
